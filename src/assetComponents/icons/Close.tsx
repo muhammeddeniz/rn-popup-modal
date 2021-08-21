@@ -8,6 +8,7 @@ function SvgClose(props: SvgProps) {
       height={36}
       viewBox="0 0 48 48"
       fill="currentColor"
+      //@ts-ignore
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >

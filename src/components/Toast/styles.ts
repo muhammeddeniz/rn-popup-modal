@@ -17,17 +17,14 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
-    paddingHorizontal: 10,
   },
-  timing: {
-    borderBottomRightRadius: 5,
-    borderBottomLeftRadius: 5,
-    height: 10,
+  backgroundImage: {
     width: '100%',
-    backgroundColor: 'rgba(0, 0, 0, 1)',
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
+    height: '100%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 10,
+    justifyContent: 'space-between',
   },
   content: {
     flex: 1,
@@ -35,20 +32,17 @@ const styles = StyleSheet.create({
     paddingRight: 20,
   },
   title: {
+    marginTop: 10,
     color: '#fff',
     fontWeight: 'bold',
-    fontSize: 16,
+    fontSize: 17,
   },
-  subtitle: {
+  text: {
     marginTop: 5,
     fontWeight: '300',
-    fontSize: 13,
+    fontSize: 14,
     color: '#fff',
-  },
-  img: {
-    flex: 1,
-    resizeMode: 'cover',
-    justifyContent: 'center',
+    marginBottom: 10,
   },
   iconStatus: {},
 });

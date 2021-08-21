@@ -12,7 +12,7 @@ export default function App() {
   const modalRef = React.useRef();
 
   return (
-    <Root>
+    <View style={{ flex: 1 }}>
       <View style={styles.container}>
         <TouchableOpacity
           onPress={() => {
@@ -64,7 +64,7 @@ export default function App() {
         type="Info"
         duration={-1}
       />
-    </Root>
+    </View>
   );
 }
 

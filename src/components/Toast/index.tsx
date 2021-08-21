@@ -6,6 +6,7 @@ import {
   Dimensions,
   Platform,
   TouchableOpacity,
+  ImageBackground,
 } from 'react-native';
 
 import styles from './styles';
@@ -51,7 +52,7 @@ export const Toast: React.FC<Props> = ({
   const BG: string = backgroundColor
     ? backgroundColor
     : type === PopupType.success
-    ? '#2D6A4F'
+    ? '#03A65A'
     : type === PopupType.warning
     ? '#FC8621'
     : type === PopupType.error
@@ -68,6 +69,15 @@ export const Toast: React.FC<Props> = ({
     ) : (
       <Question />
     );
+
+  const sourceImg =
+    type === PopupType.success
+      ? require('../../assets/images/bg_green.png')
+      : type === PopupType.error
+      ? require('../../assets/images/bg_red.png')
+      : type === PopupType.info
+      ? require('../../assets/images/bg_blue.png')
+      : require('../../assets/images/bg_orange.png');
 
   function start() {
     Animated.spring(toast, {
@@ -116,15 +126,17 @@ export const Toast: React.FC<Props> = ({
         },
       ]}
     >
-      <View style={styles.iconStatus}>{icon}</View>
-      <View style={styles.content}>
-        <Text style={[styles.title]}>{title}</Text>
-        <Text style={styles.subtitle}>{text}</Text>
-      </View>
+      <ImageBackground source={sourceImg} style={styles.backgroundImage}>
+        <View style={styles.iconStatus}>{icon}</View>
+        <View style={styles.content}>
+          <Text style={[styles.title]}>{title}</Text>
+          <Text style={styles.text}>{text}</Text>
+        </View>
 
-      <TouchableOpacity onPress={hideToast}>
-        <Close color="#fff" />
-      </TouchableOpacity>
+        <TouchableOpacity onPress={hideToast}>
+          <Close color="#fff" />
+        </TouchableOpacity>
+      </ImageBackground>
     </Animated.View>
   );
 };

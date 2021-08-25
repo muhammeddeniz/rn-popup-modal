@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
-import { Toast, Root } from 'react-native-rn-popup-modal';
+import { Toast, Base, Modal } from 'react-native-rn-popup-modal';
 
 export default function App() {
   const [result, setResult] = React.useState<number | undefined>();
@@ -12,7 +12,7 @@ export default function App() {
   const modalRef = React.useRef();
 
   return (
-    <View style={{ flex: 1 }}>
+    <Base>
       <View style={styles.container}>
         <TouchableOpacity
           onPress={() => {
@@ -44,27 +44,17 @@ export default function App() {
           }}
         >
           <Text>Call Toast3</Text>
+          <Text>Call Toast3</Text>
+          <Text>Call Toast3</Text>
+          <Text>Call Toast3</Text>
+          <Text>Call Toast3</Text>
+          <Text>Call Toast3</Text>
+          <Text>Call Toast3</Text>
         </TouchableOpacity>
       </View>
-
-      <Toast showToast={showToast} setShowToast={setShowToast} type="Error" />
-      <Toast
-        showToast={showToast1}
-        setShowToast={setShowToast1}
-        type="Success"
-      />
-      <Toast
-        showToast={showToast2}
-        setShowToast={setShowToast2}
-        type="Warning"
-      />
-      <Toast
-        showToast={showToast3}
-        setShowToast={setShowToast3}
-        type="Info"
-        duration={-1}
-      />
-    </View>
+      <Toast showToast={showToast} setShowToast={setShowToast}></Toast>
+      <Modal visible={showToast3} setVisible={setShowToast3} duration={-1} />
+    </Base>
   );
 }
 

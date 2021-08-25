@@ -1,10 +1,12 @@
 import React from 'react';
 import { View } from 'react-native';
-import { render } from '@testing-library/react-native';
+import { cleanup, render } from '@testing-library/react-native';
 
 import Root from '../index';
 
 describe('Root component test', () => {
+  afterEach(cleanup);
+
   it('should render without crash', () => {
     const { getByTestId } = render(<Root />);
     const root = getByTestId('Root');

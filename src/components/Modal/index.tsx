@@ -2,22 +2,12 @@ import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
-  Modal,
   TouchableOpacity,
   Dimensions,
   Animated,
-  Platform,
 } from 'react-native';
 
-import {
-  Close,
-  Question,
-  Done,
-  Success,
-  Fail,
-  Warning,
-} from '../../assetComponents/icons';
-
+import { Close, Done } from '../../assetComponents/icons';
 import styles, { iconSize } from './styles';
 
 type ModalType = 'Success' | 'Error';
@@ -57,12 +47,7 @@ const ModalComponent: React.FC<Props> = ({
     const Duration =
       duration > 0 ? duration : duration === -1 ? 9999999999999 : 3000;
 
-    // setInterval(() => {
-    // }, [])
-
     setTimeout(() => {
-      // this.runTiming();
-      // this.runCurrentTime();
       hide();
     }, Duration);
   }
@@ -83,7 +68,7 @@ const ModalComponent: React.FC<Props> = ({
   }, [visible]);
 
   return (
-    <View>
+    <View testID="Modal">
       <TouchableOpacity
         style={{
           width: width,
@@ -104,24 +89,46 @@ const ModalComponent: React.FC<Props> = ({
       >
         <View style={styles.iconStatus}>
           {modalType === 'Success' ? (
-            <Done width={iconSize} height={iconSize} color="#13C39C" />
+            <Done
+              testID="doneSvg"
+              width={iconSize}
+              height={iconSize}
+              color="#13C39C"
+            />
           ) : (
-            <Close width={iconSize} height={iconSize} color="#FB4B4B" />
+            <Close
+              testID="closeSvg"
+              width={iconSize}
+              height={iconSize}
+              color="#FB4B4B"
+            />
           )}
         </View>
         <View style={styles.content}>
-          <Text style={[styles.title]}>{title}</Text>
-          <Text style={styles.text}>{text}</Text>
+          <Text testID="title" style={[styles.title]}>
+            {title}
+          </Text>
+          <Text testID="text" style={styles.text}>
+            {text}
+          </Text>
         </View>
 
         <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.leftButton} onPress={hide}>
-            <Text style={[styles.buttonText, { color: '#9BA9B9' }]}>
+          <TouchableOpacity
+            testID="cancelButton"
+            style={styles.leftButton}
+            onPress={hide}
+          >
+            <Text
+              testID="leftButtonText"
+              style={[styles.buttonText, { color: '#9BA9B9' }]}
+            >
               {leftButtonText}
             </Text>
           </TouchableOpacity>
 
           <TouchableOpacity
+            testID="rightButton"
             style={[
               styles.rightButton,
               {
@@ -131,6 +138,7 @@ const ModalComponent: React.FC<Props> = ({
             onPress={() => onRightButtonPress()}
           >
             <Text
+              testID="rightButtonText"
               style={[
                 styles.buttonText,
                 {

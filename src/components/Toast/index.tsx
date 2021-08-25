@@ -83,12 +83,7 @@ export const Toast: React.FC<Props> = ({
     const Duration =
       duration > 0 ? duration : duration === -1 ? 9999999999999 : 3000;
 
-    // setInterval(() => {
-    // }, [])
-
     setTimeout(() => {
-      // this.runTiming();
-      // this.runCurrentTime();
       hideToast();
     }, Duration);
   }

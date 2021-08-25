@@ -20,21 +20,16 @@ import {
 
 const { height } = Dimensions.get('screen');
 
-enum PopupType {
-  success = 'Success',
-  info = 'Info',
-  warning = 'Warning',
-  error = 'Error',
-}
+type ToastType = 'Success' | 'Info' | 'Warning' | 'Error';
 
 type Props = {
   showToast: boolean;
   setShowToast: Function;
-  type: PopupType;
-  title: string;
-  text: string;
-  backgroundColor: string;
-  duration: number;
+  type?: ToastType;
+  title?: string;
+  text?: string;
+  backgroundColor?: string;
+  duration?: number;
 };
 
 export const Toast: React.FC<Props> = ({
@@ -51,38 +46,37 @@ export const Toast: React.FC<Props> = ({
 
   const BG: string = backgroundColor
     ? backgroundColor
-    : type === PopupType.success
+    : type === 'Success'
     ? '#03A65A'
-    : type === PopupType.warning
+    : type === 'Warning'
     ? '#FC8621'
-    : type === PopupType.error
+    : type === 'Error'
     ? '#C72C41'
     : '#0070E0';
 
   const icon =
-    type === PopupType.success ? (
+    type === 'Success' ? (
       <Success />
-    ) : type === PopupType.error ? (
+    ) : type === 'Error' ? (
       <Fail />
-    ) : type === PopupType.warning ? (
+    ) : type === 'Warning' ? (
       <Warning />
     ) : (
       <Question />
     );
 
   const sourceImg =
-    type === PopupType.success
+    type === 'Success'
       ? require('../../assets/images/bg_green.png')
-      : type === PopupType.error
+      : type === 'Error'
       ? require('../../assets/images/bg_red.png')
-      : type === PopupType.info
+      : type === 'Info'
       ? require('../../assets/images/bg_blue.png')
       : require('../../assets/images/bg_orange.png');
 
   function start() {
     Animated.spring(toast, {
       toValue: Platform.OS === 'ios' ? 50 : 10,
-      bounciness: 12,
       useNativeDriver: true,
     }).start();
 
@@ -116,6 +110,7 @@ export const Toast: React.FC<Props> = ({
 
   return (
     <Animated.View
+      testID="Toast"
       {...props}
       style={[
         styles.toast,
@@ -127,14 +122,21 @@ export const Toast: React.FC<Props> = ({
       ]}
     >
       <ImageBackground source={sourceImg} style={styles.backgroundImage}>
-        <View style={styles.iconStatus}>{icon}</View>
+        <View testID="leftIconContainer" style={styles.iconStatus}>
+          {icon}
+        </View>
+
         <View style={styles.content}>
-          <Text style={[styles.title]}>{title}</Text>
-          <Text style={styles.text}>{text}</Text>
+          <Text testID="title" style={[styles.title]}>
+            {title}
+          </Text>
+          <Text testID="text" style={styles.text}>
+            {text}
+          </Text>
         </View>
 
         <TouchableOpacity onPress={hideToast}>
-          <Close color="#fff" />
+          <Close testID="closeSvg" color="#fff" />
         </TouchableOpacity>
       </ImageBackground>
     </Animated.View>

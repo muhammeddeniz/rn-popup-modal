@@ -1,3 +1,7 @@
+![license](https://img.shields.io/npm/l/rn-toast-modal)
+![version](https://img.shields.io/npm/v/rn-toast-modal)
+![type](https://img.shields.io/npm/types/rn-toast-modal)
+
 # rn-toast-modal
 
 Popup and modal for react native projects

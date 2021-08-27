@@ -41,7 +41,7 @@ cd ios && pod install
     </tr>
     <tr>
        <th>
-        <img src="https://raw.githubusercontent.com/ORESoftware/suman/master/images/toast_success.png?raw=true"/>
+        <img src="https://github.com/muhammeddeniz/rn-popup-modal/blob/master/images/toast_success.png?raw=true"/>
         </th>
          <th>
         <img src="https://github.com/muhammeddeniz/rn-popup-modal/blob/master/images/toast_error.png?raw=true"/>

@@ -1,6 +1,6 @@
 {
   "name": "rn-toast-modal",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Popup and modal for rn projects",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",

@@ -1,6 +1,6 @@
 {
-  "name": "react-native-rn-popup-modal-example",
-  "description": "Example app for react-native-rn-popup-modal",
+  "name": "rn-popup-modal-example",
+  "description": "Example app for rn-popup-modal",
   "version": "0.0.1",
   "private": true,
   "main": "index",

@@ -1,5 +1,5 @@
 {
-  "name": "react-native-rn-popup-modal",
+  "name": "rn-popup-modal",
   "version": "0.1.0",
   "description": "Popup and modal for rn projects",
   "main": "lib/commonjs/index",
@@ -13,7 +13,7 @@
     "android",
     "ios",
     "cpp",
-    "react-native-rn-popup-modal.podspec",
+    "rn-popup-modal.podspec",
     "!lib/typescript/example",
     "!android/build",
     "!ios/build",

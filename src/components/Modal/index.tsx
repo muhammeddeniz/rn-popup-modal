@@ -17,7 +17,6 @@ type Props = {
   setVisible: Function;
   title?: string;
   text?: string;
-  duration?: number;
   modalType?: ModalType;
   leftButtonText?: string;
   rightButtonText?: string;
@@ -26,11 +25,10 @@ type Props = {
 const { height, width } = Dimensions.get('screen');
 
 const ModalComponent: React.FC<Props> = ({
-  visible,
-  setVisible,
+  visible = false,
+  setVisible = () => {},
   title = 'Default',
   text = 'Default',
-  duration = 200,
   modalType = 'Success',
   leftButtonText = 'Cancel',
   rightButtonText = 'Default',
@@ -43,13 +41,6 @@ const ModalComponent: React.FC<Props> = ({
       toValue: height * 0.5 - 50,
       useNativeDriver: true,
     }).start();
-
-    const Duration =
-      duration > 0 ? duration : duration === -1 ? 9999999999999 : 3000;
-
-    setTimeout(() => {
-      hide();
-    }, Duration);
   }
 
   function hide() {

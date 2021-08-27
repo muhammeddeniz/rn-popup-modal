@@ -1,22 +1,16 @@
 {
-  "name": "react-native-rn-popup-modal-example",
+  "name": "rn-popup-modal-example",
   "displayName": "RnPopupModal Example",
   "expo": {
-    "name": "react-native-rn-popup-modal-example",
-    "slug": "react-native-rn-popup-modal-example",
-    "description": "Example app for react-native-rn-popup-modal",
+    "name": "rn-popup-modal-example",
+    "slug": "rn-popup-modal-example",
+    "description": "Example app for rn-popup-modal",
     "privacy": "public",
     "version": "1.0.0",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
+    "platforms": ["ios", "android", "web"],
     "ios": {
       "supportsTablet": true
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+    "assetBundlePatterns": ["**/*"]
   }
 }

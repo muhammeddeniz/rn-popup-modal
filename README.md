@@ -1,17 +1,30 @@
-# rn-popup-modal
+# rn-toast-modal
 
 Popup and modal for react native projects
 
 ## Installation
 
-yarn
-
 ```sh
-yarn add rn-popup-modal
+yarn add rn-toast-modal
 ```
 
 ```sh
-npm install rn-popup-modal
+npm install rn-toast-modal
+```
+
+</br>
+
+this package use svg for that make sure you have react-native-svg package.
+
+```sh
+yarn add react-native-svg
+```
+
+install pods for ios
+
+```sh
+cd ios && pod install
+
 ```
 
 </br></br>
@@ -28,16 +41,16 @@ npm install rn-popup-modal
     </tr>
     <tr>
        <th>
-        <img style="width:300px;" src="./images/toast_success.png"/>
+        <img src="https://raw.githubusercontent.com/ORESoftware/suman/master/images/toast_success.png?raw=true"/>
         </th>
          <th>
-        <img style="width:300px;" src="./images/toast_error.png"/>
+        <img src="https://github.com/muhammeddeniz/rn-popup-modal/blob/master/images/toast_error.png?raw=true"/>
         </th>
         <th>
-        <img style="width:300px;" src="./images/toast_warning.png"/>
+        <img src="https://github.com/muhammeddeniz/rn-popup-modal/blob/master/images/toast_warning.png?raw=true"/>
         </th>
         <th>
-        <img style="width:300px;" src="./images/toast_info.png"/>
+        <img src="https://github.com/muhammeddeniz/rn-popup-modal/blob/master/images/toast_info.png?raw=true"/>
         </th>
     </tr>
     <tr></tr>
@@ -55,10 +68,10 @@ npm install rn-popup-modal
     </tr>
     <tr>
        <th>
-        <img style="width:300px;" src="./images/modal_success.png"/>
+        <img src="https://github.com/muhammeddeniz/rn-popup-modal/blob/master/images/modal_success.png?raw=true"/>
         </th>
          <th>
-        <img style="width:300px;" src="./images/modal_error.png"/>
+        <img src="https://github.com/muhammeddeniz/rn-popup-modal/blob/master/images/modal_error.png?raw=true"/>
         </th>
     </tr>
     <tr></tr>
@@ -73,7 +86,7 @@ npm install rn-popup-modal
 ```tsx
 import React, { useState } from 'react';
 import { Text, TouchableOpacity, View, StyleSheet } from 'react-native';
-import { Toast, Base } from 'rn-popup-modal';
+import { Toast, Base } from 'rn-toast-modal';
 
 // ...
 
@@ -127,7 +140,7 @@ Default duration value is 3000ms. If you don`t want to toast disapare set durati
 ```tsx
 import React, { useState } from 'react';
 import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
-import { Modal, Base } from 'rn-popup-modal';
+import { Modal, Base } from 'rn-toast-modal';
 
 // ...
 

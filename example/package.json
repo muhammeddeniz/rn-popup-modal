@@ -1,6 +1,6 @@
 {
-  "name": "rn-popup-modal-example",
-  "description": "Example app for rn-popup-modal",
+  "name": "rn-toast-modal-example",
+  "description": "Example app for rn-toast-modal",
   "version": "0.0.1",
   "private": true,
   "main": "index",

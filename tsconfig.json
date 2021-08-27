@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "rn-popup-modal": ["./src/index"]
+      "rn-toast-modal": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

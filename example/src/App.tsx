@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
-import { Modal, Base } from 'rn-popup-modal';
+import { Modal, Base } from 'rn-toast-modal';
 
 // ...
 

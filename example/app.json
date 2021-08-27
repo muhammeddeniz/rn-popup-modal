@@ -1,10 +1,10 @@
 {
-  "name": "rn-popup-modal-example",
+  "name": "rn-toast-modal-example",
   "displayName": "RnPopupModal Example",
   "expo": {
-    "name": "rn-popup-modal-example",
-    "slug": "rn-popup-modal-example",
-    "description": "Example app for rn-popup-modal",
+    "name": "rn-toast-modal-example",
+    "slug": "rn-toast-modal-example",
+    "description": "Example app for rn-toast-modal",
     "privacy": "public",
     "version": "1.0.0",
     "platforms": ["ios", "android", "web"],

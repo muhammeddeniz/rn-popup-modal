@@ -8,6 +8,7 @@ function SvgFail(props: SvgProps) {
       height={48}
       viewBox="0 0 78 78"
       fill="currentColor"
+      // @ts-ignore
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >

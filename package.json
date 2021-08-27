@@ -1,6 +1,6 @@
 {
-  "name": "rn-popup-modal",
-  "version": "0.1.0",
+  "name": "rn-toast-modal",
+  "version": "0.1.1",
   "description": "Popup and modal for rn projects",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -13,7 +13,7 @@
     "android",
     "ios",
     "cpp",
-    "rn-popup-modal.podspec",
+    "rn-toast-modal.podspec",
     "!lib/typescript/example",
     "!android/build",
     "!ios/build",
@@ -37,13 +37,16 @@
     "ios",
     "android"
   ],
-  "repository": "https://muhammed-dnz.vercel.app/",
-  "author": "Muhammed Deniz <muhammeddenizcs@gmail.com> (https://muhammed-dnz.vercel.app/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/muhammeddeniz/rn-popup-modal"
+  },
+  "author": "Muhammed Deniz <muhammeddenizcs@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://muhammed-dnz.vercel.app//issues"
+    "url": "https://github.com/muhammeddeniz/rn-popup-modal/issues"
   },
-  "homepage": "https://muhammed-dnz.vercel.app/#readme",
+  "homepage": "https://github.com/muhammeddeniz/rn-popup-modal#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -162,5 +165,9 @@
         }
       ]
     ]
+  },
+  "directories": {
+    "example": "example",
+    "lib": "lib"
   }
 }
